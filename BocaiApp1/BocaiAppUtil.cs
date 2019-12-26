@@ -385,7 +385,6 @@ namespace Com.Bocaihua.APP
 
             if (Java.Net.HttpStatus.Ok == conn.ResponseCode)
             {
-                
                 Log.Info(Application.Context.PackageName, "HTTP请求成功:" + pUrl);
                 System.IO.Stream inSteam = conn.InputStream;
                 int read = -1;
