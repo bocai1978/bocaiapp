@@ -1,0 +1,6 @@
+D:\Work\source\repos\BocaiApp1\BocaiHuaAppWebAspNET\bin\BocaiHuaAppWebAspNET.dll.config
+D:\Work\source\repos\BocaiApp1\BocaiHuaAppWebAspNET\bin\BocaiHuaAppWebAspNET.dll
+D:\Work\source\repos\BocaiApp1\BocaiHuaAppWebAspNET\bin\BocaiHuaAppWebAspNET.pdb
+D:\Work\source\repos\BocaiApp1\BocaiHuaAppWebAspNET\obj\Release\BocaiHuaAppWebAspNET.csprojAssemblyReference.cache
+D:\Work\source\repos\BocaiApp1\BocaiHuaAppWebAspNET\obj\Release\BocaiHuaAppWebAspNET.dll
+D:\Work\source\repos\BocaiApp1\BocaiHuaAppWebAspNET\obj\Release\BocaiHuaAppWebAspNET.pdb

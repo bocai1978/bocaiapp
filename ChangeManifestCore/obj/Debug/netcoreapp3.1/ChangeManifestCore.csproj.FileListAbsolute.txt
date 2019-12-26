@@ -1,0 +1,11 @@
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\bin\Debug\netcoreapp3.1\ChangeManifestCore.exe
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\bin\Debug\netcoreapp3.1\ChangeManifestCore.deps.json
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\bin\Debug\netcoreapp3.1\ChangeManifestCore.runtimeconfig.json
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\bin\Debug\netcoreapp3.1\ChangeManifestCore.runtimeconfig.dev.json
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\bin\Debug\netcoreapp3.1\ChangeManifestCore.dll
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\bin\Debug\netcoreapp3.1\ChangeManifestCore.pdb
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\obj\Debug\netcoreapp3.1\ChangeManifestCore.csprojAssemblyReference.cache
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\obj\Debug\netcoreapp3.1\ChangeManifestCore.AssemblyInfoInputs.cache
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\obj\Debug\netcoreapp3.1\ChangeManifestCore.AssemblyInfo.cs
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\obj\Debug\netcoreapp3.1\ChangeManifestCore.dll
+D:\Work\source\repos\BocaiApp1\ChangeManifestCore\obj\Debug\netcoreapp3.1\ChangeManifestCore.pdb

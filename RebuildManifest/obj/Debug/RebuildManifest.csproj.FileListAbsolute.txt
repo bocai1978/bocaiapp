@@ -1,0 +1,5 @@
+D:\Work\source\repos\BocaiApp1\RebuildManifest\bin\Debug\RebuildManifest.exe
+D:\Work\source\repos\BocaiApp1\RebuildManifest\bin\Debug\RebuildManifest.pdb
+D:\Work\source\repos\BocaiApp1\RebuildManifest\obj\Debug\RebuildManifest.csprojAssemblyReference.cache
+D:\Work\source\repos\BocaiApp1\RebuildManifest\obj\Debug\RebuildManifest.exe
+D:\Work\source\repos\BocaiApp1\RebuildManifest\obj\Debug\RebuildManifest.pdb
