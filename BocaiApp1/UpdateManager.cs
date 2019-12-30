@@ -19,7 +19,7 @@ namespace Com.Bocaihua.APP
     public class UpdateManager
     {
         // 应用程序Context 
-        private Context mContext;
+        private Activity mActivity;
         // 是否是最新的应用,默认为false 
         private bool isNew = false;
         private bool intercept = false;
@@ -36,23 +36,23 @@ namespace Com.Bocaihua.APP
         private const int DOWN_UPDATE = 1;
         private const int DOWN_OVER = 2;
         private const int DOWN_ERROR = 3;
-        public UpdateManager(Context context,string sUri)
+        public UpdateManager(Activity activity,string sUri)
         {
             this.mHandler = new MyHandler(this);
-            mContext = context;
+            this.mActivity = activity;
             if (Android.OS.Environment.ExternalStorageState == Android.OS.Environment.MediaMounted)
             {// 优先保存到SD卡中
 
-                savePath = context.GetExternalFilesDir("update").AbsolutePath;
+                savePath = this.mActivity.GetExternalFilesDir("download").AbsolutePath;
             }
             else
             {// 如果SD卡不存在，就保存到本应用的目录下
-                savePath = context.FilesDir.AbsolutePath +
-                    File.Separator + context.PackageName +
-                    File.Separator + "update";
+                savePath = this.mActivity.FilesDir.AbsolutePath +
+                    File.Separator + this.mActivity.PackageName +
+                    File.Separator + "download";
             }
 
-            saveFileName = savePath + File.Separator + context.ApplicationContext.PackageName + ".apk";
+            saveFileName = savePath + File.Separator + this.mActivity.ApplicationContext.PackageName + ".apk";
             apkUrl = sUri;
         }
 
@@ -78,7 +78,7 @@ namespace Com.Bocaihua.APP
          */
         private void showUpdateDialog()
         {
-            MessageBox.ShowDialog(mContext, "版本更新", "新版本已开放,请下载.",
+            MessageBox.ShowDialog(this.mActivity, "版本更新", "新版本已开放,请下载.",
                 MessageBox.MessageBoxButtons.OKCancel,
                 delegate (MessageBox.MessageBoxResult result)
                 {
@@ -100,9 +100,9 @@ namespace Com.Bocaihua.APP
          */
         private void showDownloadDialog()
         {
-            AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.mActivity);
             builder.SetTitle("软件版本更新");
-            LayoutInflater inflater = LayoutInflater.From(mContext);
+            LayoutInflater inflater = LayoutInflater.From(this.mActivity);
             View v = inflater.Inflate(Resource.Layout.update_progress, null);
             mProgress = (ProgressBar)v.FindViewById(Resource.Id.progressBarUpdate);
 
@@ -132,6 +132,7 @@ namespace Com.Bocaihua.APP
             URL url;
             try
             {
+                this.installAPK();
                 url = new URL(apkUrl);
                 HttpURLConnection conn = (HttpURLConnection)url.OpenConnection();
                 conn.Connect();
@@ -181,17 +182,20 @@ namespace Com.Bocaihua.APP
             {
                 return;
             }
+            BocaiHuaAppUtils.installAPK( new Java.IO.File( saveFileName), this.mActivity );
+/*
             Intent intent = new Intent(Intent.ActionView);
             if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.N)
             {
-                intent.SetDataAndType(Android.Net.Uri.Parse("content://" + saveFileName), "application/vnd.android.package-archive");
+                //intent.SetDataAndType(Android.Net.Uri.Parse("content://" + saveFileName), "application/vnd.android.package-archive");
+
             }
             else
             {
                 intent.SetDataAndType(Android.Net.Uri.Parse("file://" + saveFileName), "application/vnd.android.package-archive");
             }
             mContext.StartActivity(intent);
-
+*/
         }
         public void HandleMessage(Android.OS.Message msg)
         {
@@ -206,7 +210,7 @@ namespace Com.Bocaihua.APP
                     break;
                 case DOWN_ERROR:
                     this.adDownload.Dismiss();
-                    MessageBox.ShowDialog(mContext, "下载失败", "下载过程中发生错误.",
+                    MessageBox.ShowDialog(this.mActivity, "下载失败", "下载过程中发生错误.",
                         MessageBox.MessageBoxButtons.OKOnly,
                         delegate (MessageBox.MessageBoxResult result)
                         {

@@ -38,9 +38,17 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
-            "IKVM": {
+            "Xam.Plugin.Media": {
               "target": "Package",
-              "version": "[8.1.5717, )"
+              "version": "[4.0.1.5, )"
+            },
+            "Xamarin.Android.Support.Animated.Vector.Drawable": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Compat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
             },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
@@ -51,6 +59,26 @@
               "version": "[28.0.0.3, )"
             },
             "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Media.Compat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v4": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.CardView": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.RecyclerView": {
               "target": "Package",
               "version": "[28.0.0.3, )"
             },

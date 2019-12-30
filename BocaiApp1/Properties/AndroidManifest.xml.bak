@@ -7,7 +7,13 @@
                android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation" 
                android:icon="@mipmap/ic_launcher" android:label="@string/app_name" 
                android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
-
+    <!-- 解决apk安装失败的问题 -->
+    <provider android:name="android.support.v4.content.FileProvider" 
+      android:authorities="com.bocaihua.app.smartAssistant.Debug.myprovider" 
+    android:exported="false" android:grantUriPermissions="true">
+    <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+    </provider> 
+  
     <activity android:name="BocaiApp1.MainAcitivity" android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
                
       ></activity>

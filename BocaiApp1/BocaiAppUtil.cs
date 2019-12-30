@@ -8,6 +8,9 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Graphics.Drawable;
+using Android.Support.V4.Content;
+using Android.Support.V7;
 using Android.Telephony;
 using Android.Util;
 using Android.Views;
@@ -404,5 +407,31 @@ namespace Com.Bocaihua.APP
             }
             return null;
         }
+        ////调用系统的安装方法 
+        public static void installAPK(File savedFile,Activity activity) 
+        {
+            //调用系统的安装方法 
+            Intent intent = new Intent(Intent.ActionView); 
+            Android.Net.Uri data = null; 
+            // 判断版本大于等于7.0 
+            if (Build.VERSION.SdkInt>= Android.OS.BuildVersionCodes.N) 
+            {
+               // "net.csdn.blog.ruancoder.fileprovider"即是在清单文件中配置的authorities 
+                data = FileProvider.GetUriForFile(activity,activity.PackageName + ".myprovider", savedFile); 
+                //// 给目标应用一个临时授权 
+                intent.AddFlags( ActivityFlags.GrantReadUriPermission); 
+                Log.Debug("AutoUpdate","版本高于7.0 data="+data); 
+            }
+            else 
+            { 
+                data = Android.Net.Uri.FromFile(savedFile); 
+                Log.Debug("AutoUpdate","版本低于 7.0 data="+data); 
+            } 
+            intent.SetDataAndType(data, "application/vnd.android.package-archive");
+            intent.AddFlags( ActivityFlags.NewTask);
+            intent.SetAction( Intent.ActionView);
+            activity.StartActivity(intent); 
+            activity.Finish(); 
+        } 
     }
 }

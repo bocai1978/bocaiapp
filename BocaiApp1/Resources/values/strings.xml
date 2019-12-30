@@ -4,4 +4,5 @@
   <string name="package_name_release">com.bocaihua.bocaiApp.smartAssistant</string>
   <string name="action_settings">设置</string>
   <string name="keyval">keyval</string>
+  <string name="download_file_path">download</string>
 </resources>
