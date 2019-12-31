@@ -3,8 +3,8 @@
 	.section	.rodata..L.str.1,"aMS",@progbits,1
 	.type	.L.str.1, @object
 .L.str.1:
-	.asciz	"com.bocaihua.bocaiapp1"
-	.size	.L.str.1, 23
+	.asciz	"com.bocaihua.app.smartAssistant"
+	.size	.L.str.1, 32
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -63,7 +63,7 @@ mono_aot_mode_name:
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
 .L.str.8:
-	.asciz	"744bcaa0-b334-41c0-92f7-4ccddc06487c"
+	.asciz	"d34fbdc0-768d-489d-923d-490cfec03f25"
 	.size	.L.str.8, 37
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object

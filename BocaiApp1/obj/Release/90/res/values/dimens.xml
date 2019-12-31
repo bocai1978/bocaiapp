@@ -1,9 +1,1 @@
-<resources>
-  <dimen name="fab_margin">16dp</dimen>
-  <dimen name="button_width_s">30dp</dimen>
-  <dimen name="button_height_s">30dp</dimen>
-  <dimen name="button_width_m">40dp</dimen>
-  <dimen name="button_height_m">40dp</dimen>
-  <dimen name="button_width_l">50dp</dimen>
-  <dimen name="button_height_l">50dp</dimen>
-</resources>
+<resources><dimen name="fab_margin">16dp</dimen><dimen name="button_width_s">30dp</dimen><dimen name="button_height_s">30dp</dimen><dimen name="button_width_m">40dp</dimen><dimen name="button_height_m">40dp</dimen><dimen name="button_width_l">50dp</dimen><dimen name="button_height_l">50dp</dimen></resources>

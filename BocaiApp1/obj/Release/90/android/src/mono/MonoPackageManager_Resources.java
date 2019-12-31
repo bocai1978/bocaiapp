@@ -1,8 +1,11 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "BocaiApp1.dll" comes first in this list. */
-		"BocaiApp1.dll",
+		/* We need to ensure that "com.bocaihua.app.smartAssistant.dll" comes first in this list. */
+		"com.bocaihua.app.smartAssistant.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Media.dll",
+		"Plugin.Permissions.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
@@ -28,6 +31,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.Interpolator.dll",
 		"Xamarin.Android.Support.Loader.dll",
 		"Xamarin.Android.Support.LocalBroadcastManager.dll",
+		"Xamarin.Android.Support.Media.Compat.dll",
 		"Xamarin.Android.Support.Print.dll",
 		"Xamarin.Android.Support.SlidingPaneLayout.dll",
 		"Xamarin.Android.Support.SwipeRefreshLayout.dll",

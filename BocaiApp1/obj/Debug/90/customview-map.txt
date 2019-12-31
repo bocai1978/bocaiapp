@@ -41,7 +41,6 @@ resources;obj\Debug\90\res\values\dimens.xml
 resources;obj\Debug\90\res\values\ic_launcher_background.xml
 resources;obj\Debug\90\res\values\strings.xml
 resources;obj\Debug\90\res\values\styles.xml
-resources;obj\Debug\90\res\xml\file_paths.xml
 root-path;obj\Debug\90\res\xml\file_paths.xml
 ScrollView;obj\Debug\90\res\layout\view_full_window.xml
 SeekBar;obj\Debug\90\res\layout\settings_window.xml
